@@ -77,7 +77,7 @@ app.delete("/posts/:id", async (req, res)=>{
         }
 })
 
-//코멘트등록
+//코멘트등록 //다시보기
 app.post("/posts/:id/comments", async (req, res) => {
     const postId = req.params.id;
     const {content} = req.body;
