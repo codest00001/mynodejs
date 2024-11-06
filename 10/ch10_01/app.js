@@ -4,6 +4,8 @@ const fs = require('fs');
 const path = require('path');
 //라우터 임포트. routes라는 디렉토리에 설정된 라우터들을 임포트.
 const userRoute = require('./routes/userRoute');
+const postRoute = require('./routes/postRoute');
+const authRoute = require('./routes/authRoute');
 
 const models = require('./models') //모델스 안의 index.js가 실행되는 것
 const app = express();
@@ -13,6 +15,9 @@ app.use(express.json());
 
 //라우터 추가
 app.use('/users', userRoute); // /users 주소넣으면 userRoute연결해. ./users라고 적으면 안됨. 점을 찍으면 안됨.
+app.use('/posts', postRoute);
+app.use('/auth', authRoute);
+
 
 app.listen(PORT, ()=> {
     console.log(`server is running on ${PORT}`)
