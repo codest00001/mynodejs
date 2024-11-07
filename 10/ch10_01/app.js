@@ -29,3 +29,8 @@ app.listen(PORT, ()=> {
         process.exit();
     })
 })
+
+//코드 만드는 순서
+//데이터베이스 부터 시작해서 쿼리문으로 먼저 파악해 봄
+//내가 받아 올 데이터를 먼저 생각해보고 쿼리문 작성해서 불러와 봄
+//dao - service - controller - router 의 순서대로 작성
